@@ -133,8 +133,10 @@ public class GazeInputModule : BaseInputModule {
 			HandleDrag();
 		} else if (Time.unscaledTime - pointerData.clickTime < clickTime) {
 			// Delay new events until clickTime has passed.
-		} else if (!pointerData.eligibleForClick && gazeTriggered ) {
-			//               (Cardboard.SDK.Triggered || Input.GetMouseButtonDown(0))) {
+//		} else if (!pointerData.eligibleForClick && gazeTriggered ) {
+		} else if (!pointerData.eligibleForClick &&
+			(Cardboard.SDK.Triggered || Input.GetMouseButtonDown(0))) {
+
 
 			// New trigger action.
 			HandleTrigger();

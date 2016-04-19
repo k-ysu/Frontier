@@ -13,12 +13,13 @@ public class MoveCamera : MonoBehaviour {
 	//setting
 	public float gazeTime=0f;
 	private float gazeBonus=0f;
-	private float timeTriggered=0.5f;
-	private float to_tgt=500.0f;
-	private float from_tgt=5.0f;
+	private float timeTriggered=0.7f;
+	private float to_tgt=400.0f;
+	private float from_tgt=3.0f;
 	private float to_height =5.0f;
-	private float speed = 1.7f;
+	private float speed = 2.3f;
 	private float hight = 1.25f;
+	private bool gazeTriger = false;
 
 	// Use this for initialization
 	void Start () {
@@ -79,6 +80,11 @@ public class MoveCamera : MonoBehaviour {
 		float tgt_time = timeTriggered - gazeBonus;
 		//Debug.Log (tgt_time);
 		bool gazeTriggered = ( Time.realtimeSinceStartup - gazeTime  >= tgt_time  );
+		if (gazeTriger == false) {
+			gazeTriggered = false;
+			gazeTriggered = (Cardboard.SDK.Triggered || Input.GetMouseButtonDown (0));
+		}
+
 		//Debug.Log (is_org);
 
 		if ( ( gazeTriggered && is_org ) || is_moving ) {
