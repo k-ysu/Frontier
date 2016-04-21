@@ -229,7 +229,7 @@ public class GazeInputModule : BaseInputModule {
 						moveCam.gazedOrgPosition = intersectionPosition;
 						moveCam.gazeTime =  Time.realtimeSinceStartup;
 						moveCam.is_org = true;
-						Debug.Log (terrain.name);
+						//Debug.Log (terrain.name);
 					}
 				}
 

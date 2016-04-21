@@ -23,13 +23,27 @@ public class MoveCamera : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+
+		Debug.Log ("---Start---");
+		GameObject head =  GameObject.FindGameObjectsWithTag("VRMain")[0];
+
+		GameObject obj = GameObject.FindGameObjectWithTag("SceneCtr");
+		SceneStatic scene_mgr = obj.GetComponents<SceneStatic> () [0];
+		if (scene_mgr.is_move_cam == true) {
+			scene_mgr.is_move_cam = false;
+			head.transform.position = scene_mgr.cam_postion;
+			head.transform.rotation = scene_mgr.cam_rotation;
+		}
+
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 
+		//head position
+		GameObject head =  GameObject.FindGameObjectsWithTag("VRMain")[0];
 
 
 		//reduce gaze time bonus
@@ -38,8 +52,7 @@ public class MoveCamera : MonoBehaviour {
 			gazeBonus = 0;
 		}
 
-		//head position
-		GameObject head =  GameObject.FindGameObjectsWithTag("VRMain")[0];
+
 		//Debug.Log (head);
 
 		// position reset

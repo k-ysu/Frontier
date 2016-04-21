@@ -69,9 +69,11 @@
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\CardboardAndroidDevice.cs" />
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\CardboardiOSDevice.cs" />
      <Compile Include="Assets\Cardboard\Scripts\VRDevices\UnityEditorDevice.cs" />
+     <Compile Include="Assets\Scripts\ChangeScene.cs" />
      <Compile Include="Assets\Scripts\FixFPS.cs" />
      <Compile Include="Assets\Scripts\FpsMonitor.cs" />
      <Compile Include="Assets\Scripts\MoveCamera.cs" />
+     <Compile Include="Assets\Scripts\SceneStatic.cs" />
      <None Include="Assets\Aoi Character Pack\Shaders\toon_hair.shader" />
      <None Include="Assets\Aoi Character Pack\Shaders\toon_cutoff.shader" />
      <None Include="Assets\Cardboard\Distortion\CardboardDistortion.cginc" />

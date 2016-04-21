@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/Corridor_light.unity
+- path: Assets/Scene/Corridor.unity
   isLoaded: 1
   isActive: 1
